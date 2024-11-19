@@ -94,7 +94,7 @@ def computepay(h, r):
         else:
             pay = h * r
         return pay
-    except:
+    except Exception as e:
         print("Please enter a number")
 
 hrs = input("Enter Hours: ")
@@ -141,7 +141,7 @@ def computegrade(score):
             print("F")
         else:
             print("Bad Score")
-    except:
+    except Exception as e:
         print("Bad score")
 
 score = input("Enter Score: ")

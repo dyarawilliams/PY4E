@@ -24,7 +24,7 @@ while True:
         total = total + num
         count = count + 1
         average = total / count
-    except:
+    except Exception as e:
         print('Invailed Input')
         continue
     
@@ -45,7 +45,7 @@ while True:
             largest = num
         if smallest is None or num < smallest: 
             smallest = num
-    except:
+    except Exception as e:
         print('Invalid input')
 
 print("Maximum is", largest)

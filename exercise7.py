@@ -61,7 +61,7 @@ print("Average spam confidence:", str(avg))
 fname = input("Enter the file name: ")
 try:
     fh = open(fname)
-except:
+except Exception as e:
     if(fname == 'na na boo boo'):
         print("NA NA BOO BOO TO YOU - You have been punk'd")
         exit()
