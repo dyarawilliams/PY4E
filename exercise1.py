@@ -1,3 +1,4 @@
+# Date: October 13, 2024
 # Exercise 1-1
 # What is the function of the secondary memory in a computer?
 # a) Execute all of the computation and logic of the program
