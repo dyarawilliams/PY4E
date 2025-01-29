@@ -103,3 +103,48 @@ for key, val in lst:
 # Exercise 10-3: Write a program that reads a file and prints the letters in decreasing order of frequency.
 
 # Your program should convert all the input to lower case and only count the letters a-z. Your program should not count spaces, digits, punctuation, or anything other than the letters a-z. Find text samples from several different languages and see how letter frequency varies between languages. Compare your results with the tables at https://wikipedia.org/wiki/Letter_frequencies.
+
+# Prompt the user for a file name
+fname = input("Enter file name: ")
+# If no file name is entered, use a default file
+if len(fname) < 1:
+    fname = "mbox-short.txt"
+# Open the specified file
+fh = open(fname)
+# Create an empty dictionary to store letter counts
+counts = dict()
+
+# Iterate through each line in the file
+for line in fh:
+    # Convert the line to lower case and only count the letters a-z. The program should not count spaces, digits, punctuation, or anything other than letters a-z
+    line = line.lower()
+    line = ''.join(e for e in line if e.isalpha())
+    
+    # Iterate through each character in the line
+    for char in line:
+        # If the character is not a letter, skip it
+        if not char.isalpha():
+            continue
+        # If the character is not in the dictionary, add it with a count of 1
+        if char not in counts:
+            counts[char] = 1
+        else:
+            # Otherwise, increment its count
+            counts[char] += 1
+
+# Create a list of tuples, where each tuple contains (count, letter)
+lst = list()
+for key, val in list(counts.items()):
+    lst.append((val, key))
+
+# Sort the list in descending order based on the count
+lst.sort(reverse=True)
+
+# Print the letters in decreasing order of frequency
+for val, key in lst:
+    print(key, val)
+
+
+
+
+# Find text samples from several different languages and see how letter frequency varies between languages. Compare your results with the tables at https://wikipedia.org/wiki/Letter_frequencies.
