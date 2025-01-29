@@ -143,8 +143,3 @@ lst.sort(reverse=True)
 # Print the letters in decreasing order of frequency
 for val, key in lst:
     print(key, val)
-
-
-
-
-# Find text samples from several different languages and see how letter frequency varies between languages. Compare your results with the tables at https://wikipedia.org/wiki/Letter_frequencies.
