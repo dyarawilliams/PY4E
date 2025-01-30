@@ -1,4 +1,6 @@
-import re # impor the regex module for pattern matching
+# Date: December 29, 2024
+
+import re # import the regex module for pattern matching
 
 # Open the specified file for reading
 # hand = open('regex_sum_42.txt')
@@ -14,6 +16,7 @@ for line in hand:
 
     # Find all sequences of digits (numbers) in the line using regular expression
     x = re.findall('[0-9]+', line)
+
 
     # If there are any numbers found in the line
     if len(x) > 0:
